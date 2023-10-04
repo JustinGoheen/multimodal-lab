@@ -17,7 +17,7 @@ from pathlib import Path
 
 import torch
 
-from multimodallab.pipeline.datamodule import LabDataModule
+from multilab.pipeline.datamodule import LabDataModule
 
 
 def test_module_not_abstract():

@@ -23,7 +23,7 @@ line-length = 120
 
 [tool.isort]
 known_first_party = [
-    "multimodallab",
+    "multilab",
 ]
 profile = "black"
 line_length = 120
@@ -52,7 +52,7 @@ ignore-init-module-imports = true
 max-complexity = 10
 
 [tool.mypy]
-files = ["multimodallab"]
+files = ["multilab"]
 install_types = true
 non_interactive = true
 disallow_untyped_defs = true
@@ -71,10 +71,10 @@ warn_no_return = "False"
 # because lightning already defines types
 [[tool.mypy.overrides]]
 module = [
-    "multimodallab.core.module",
-    "multimodallab.cli.seed.core.module",
-    "multimodallab.cli.seed.core.trainer",
-    "multimodallab.cli.seed.pipeline.datamodule",
-    "multimodallab.cli.seed.pipeline.dataset",
+    "multilab.core.module",
+    "multilab.cli.seed.core.module",
+    "multilab.cli.seed.core.trainer",
+    "multilab.cli.seed.pipeline.datamodule",
+    "multilab.cli.seed.pipeline.dataset",
 ]
 ignore_errors = true
