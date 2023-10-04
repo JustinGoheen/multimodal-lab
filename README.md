@@ -1,30 +1,30 @@
-# Lightning Lab
+# Multimodal Lab
 
 ## Overview
 
-Lightning Lab is a public template for artificial intelligence and machine learning research projects using Lightning AI's [PyTorch Lightning](https://lightning.ai/docs/pytorch/stable/).
+Multimodal Lab is a public template for artificial intelligence and machine learning research projects using Lightning AI's [PyTorch Lightning](https://lightning.ai/docs/pytorch/stable/).
 
-The recommended way for Lightning Lab users to create new repos is with the [use this template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) button.
+The recommended way for Multimodal Lab users to create new repos is with the [use this template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) button.
 
-An adaptation can be found at [lightning-vision](https://github.com/JustinGoheen/lightninglab-vision).
+An adaptation can be found at [lightning-vision](https://github.com/JustinGoheen/multimodallab-vision).
 
 ## The Structure
 
 ### Source Module
 
-`lightninglab.core` should contain code for the Lightning Module and Trainer.
+`multimodallab.core` should contain code for the Lightning Module and Trainer.
 
-`lightninglab.components` should contain experiment utilities grouped by purpose for cohesion.
+`multimodallab.components` should contain experiment utilities grouped by purpose for cohesion.
 
-`lightninglab.pipeline` should contain code for data acquistion and preprocessing, and building a TorchDataset and LightningDataModule.
+`multimodallab.pipeline` should contain code for data acquistion and preprocessing, and building a TorchDataset and LightningDataModule.
 
-`lightninglab.api` should contain code for model serving APIs built with [FastAPI](https://fastapi.tiangolo.com/project-generation/#machine-learning-models-with-spacy-and-fastapi).
+`multimodallab.api` should contain code for model serving APIs built with [FastAPI](https://fastapi.tiangolo.com/project-generation/#machine-learning-models-with-spacy-and-fastapi).
 
-`lightninglab.cli` should contain code for the command line interface built with [Click](https://click.palletsprojects.com/en/8.1.x/) and [Rich](https://rich.readthedocs.io/en/stable/).
+`multimodallab.cli` should contain code for the command line interface built with [Click](https://click.palletsprojects.com/en/8.1.x/) and [Rich](https://rich.readthedocs.io/en/stable/).
 
-`lightninglab.pages` should contain code for data apps built with streamlit, dash, or reflex. the `pages` module naming convention is borrowed from React concepts.
+`multimodallab.pages` should contain code for data apps built with streamlit, dash, or reflex. the `pages` module naming convention is borrowed from React concepts.
 
-`lightninglab.conf.py` can assist with project, trainer, and sweep configurations.
+`multimodallab.conf` can assist with project, trainer, and sweep configurations.
 
 ### Project Root
 
@@ -60,22 +60,14 @@ An adaptation can be found at [lightning-vision](https://github.com/JustinGoheen
 
 ## Base Requirements and Extras
 
-Lightning Lab installs minimal requirements out of the box, and provides extras to make creating robust virtual environments easier. To view the requirements, in [setup.cfg](setup.cfg), see `install_requires` for the base requirements and `options.extras_require` for the available extras.
+Multimodal Lab installs requirements out of the box, and provides extras to make creating robust virtual environments easier. To view the requirements, in [setup.cfg](setup.cfg), see `install_requires` for the base requirements and `options.extras_require` for the available extras.
 
 The recommended install is as follows:
 
 ```sh
 python3 -m venv .venv
 source .venv/bin/activate
-pip install -e ".[all, { domain extra(s) }]"
-```
-
-where { domain extra(s) } is one of, or some combination of (vision, text, audio, rl, forecast) e.g.
-
-```sh
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -e ".[all, vision]"
+pip install -e ".[all]"
 ```
 
 ## Learning Resources
