@@ -24,7 +24,7 @@ An adaptation can be found at [lightning-vision](https://github.com/JustinGoheen
 
 `multilab.pages` should contain code for data apps built with streamlit, dash, or reflex. the `pages` module naming convention is borrowed from React concepts.
 
-`multilab.conf` can assist with project, trainer, and sweep configurations.
+`multilab.config` can assist with project, trainer, and sweep configurations.
 
 ### Project Root
 
